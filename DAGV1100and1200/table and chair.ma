@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: table and chair.ma
-//Last modified: Thu, Jan 22, 2026 05:27:08 PM
+//Last modified: Thu, Jan 22, 2026 05:27:41 PM
 //Codeset: UTF-8
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.1";
-fileInfo "UUID" "4B0F210E-D645-09E1-BE8C-9FB87000C2B7";
+fileInfo "UUID" "882F505E-C647-6B3A-5650-02814A8697B3";
 createNode transform -s -n "persp";
 	rename -uid "801EF924-B940-6A69-8590-538293C4AA47";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.4476420728067563 10.110164511783802 -1.8244277892459433 ;
-	setAttr ".r" -type "double3" -47.138352718684331 1851.4000000006281 5.0980264433759906e-15 ;
+	setAttr ".t" -type "double3" 11.289443402672472 6.757633704744789 -0.48921125479112115 ;
+	setAttr ".r" -type "double3" -18.338352718673551 1853.0000000006075 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CE4372A3-B34D-1C5C-0232-20AFACE16D4A";
 	setAttr -k off ".v" no;

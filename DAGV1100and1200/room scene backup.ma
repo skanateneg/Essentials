@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: room scene backup.ma
-//Last modified: Fri, Jan 30, 2026 04:21:21 PM
+//Last modified: Thu, Feb 05, 2026 09:25:21 PM
 //Codeset: UTF-8
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,18 +11,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.2";
-fileInfo "UUID" "26F4FFE9-BE47-CEA5-59A4-18BF436D64A3";
+fileInfo "UUID" "2641B056-3B48-4731-5970-19A0CAFDB74A";
 createNode transform -s -n "persp";
 	rename -uid "801EF924-B940-6A69-8590-538293C4AA47";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.2431157186670365 5.0962511939649167 10.59121136145818 ;
-	setAttr ".r" -type "double3" -15.938352719396169 3258.5999999994938 -4.1947941182987609e-16 ;
+	setAttr ".t" -type "double3" 0.75701169786956135 4.734656158452049 5.5792145738621128 ;
+	setAttr ".r" -type "double3" -25.538352719397512 3241.7999999992976 3.9776560849916891e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CE4372A3-B34D-1C5C-0232-20AFACE16D4A";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 10.892659770893802;
+	setAttr ".coi" 2.8582373781274253;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5416,16 +5416,59 @@ createNode mesh -n "plantShape" -p "plant";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "curve1";
+	rename -uid "C3CF8DE0-CA4D-7ED0-43CB-D782A8579E39";
+	setAttr ".t" -type "double3" 6.5939916803818353 0.45077343055619457 0 ;
+	setAttr ".r" -type "double3" 93.457233128861887 -5.0176479150544182 -0.23397489867312241 ;
+	setAttr ".s" -type "double3" 0.17564071883601839 1 0.13920265630325213 ;
+createNode nurbsCurve -n "curveShape1" -p "curve1";
+	rename -uid "607C5F75-CD4C-AA66-963F-BA94982C8BE2";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 10 0 no 3
+		15 0 0 0 0.10000000000000001 0.20000000000000001 0.29999999999999999 0.40000000000000002
+		 0.5 0.59999999999999998 0.69999999999999996 0.80000000000000004 0.90000000000000002
+		 1 1 1
+		13
+		8.0909431016775581 0 -4.1262776170063651
+		7.712747479933995 -0 -4.0441817114409462
+		6.7492576624408951 0 -4.0077284687996331
+		6.5614097662210833 0 -2.245345972660477
+		8.412370482698238 0 -2.6150408334368489
+		8.4207252777722363 0 -0.89934658628831354
+		6.9741542526808793 0 -0.86576171705235028
+		5.9140354860542086 0 -0.22485316772907568
+		5.5083461409987242 0 0.97920314742354353
+		5.7196861754767641 0 2.3442182343458047
+		7.0708167009894103 0 2.6611839644731141
+		7.8173217290939254 0 2.7075285454999061
+		8.2453945980775618 0 2.7592663139095581
+		;
+createNode transform -n "revolvedSurface1";
+	rename -uid "4747C3AB-7049-C865-6A2D-32B6E1D97FCD";
+	setAttr ".t" -type "double3" -1.0286749648728548 1.3585336587149601 -0.90779362317275714 ;
+	setAttr ".s" -type "double3" 0.14479420852504093 1 0.14479420852504093 ;
+createNode mesh -n "revolvedSurfaceShape1" -p "revolvedSurface1";
+	rename -uid "4D1803B2-7044-3D96-1C90-FCA028967F60";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C084197C-E149-2728-51F9-9594FA4B5213";
+	rename -uid "529C44AD-3542-B78C-85B4-F99ACC7C5542";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6E3BD9C6-4146-3F43-69AE-9D945E2194FA";
+	rename -uid "FBA45548-D440-75B5-01EE-B8896891C9F3";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "382FED61-9E49-F3CE-ED3C-9C98316025A0";
+	rename -uid "8FA5D182-7044-1FAF-6BC3-0EBD9C585769";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A9606231-E34D-1BE2-C2F5-0A913E113CBC";
+	rename -uid "F13DFDD7-5E47-6627-2EB3-33B139C485B7";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 2 ".dli";
@@ -5433,7 +5476,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "D373F7CB-3242-C75B-A741-C09DFD758DBC";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F767A7C9-7E4A-678F-A93B-72953B5CD806";
+	rename -uid "C0486866-344E-10CF-2A55-2A931A43956B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "80716D7E-AE45-63D4-8F39-60A8A2D5EBF3";
 	setAttr ".g" yes;
@@ -5539,6 +5582,22 @@ createNode groupId -n "groupId130";
 createNode groupId -n "groupId131";
 	rename -uid "18A4E079-0042-B8CC-2FEC-D8B21D8F92A2";
 	setAttr ".ihi" 0;
+createNode revolve -n "revolve1";
+	rename -uid "D153AA90-A048-2D3D-C80A-D5BD7A562578";
+	setAttr ".ax" -type "double3" 0 1 0 ;
+	setAttr ".p" -type "double3" 6.5939916803818353 0.45077343055619457 0 ;
+createNode nurbsTessellate -n "nurbsTessellate1";
+	rename -uid "720D7C04-2A42-12C9-1D3B-CD8C78B8A6F6";
+	setAttr ".pt" 1;
+	setAttr ".chr" 0.9;
+	setAttr ".ut" 1;
+	setAttr ".vt" 1;
+	setAttr ".ucr" no;
+	setAttr ".cht" 0.2;
+createNode polyNormal -n "polyNormal1";
+	rename -uid "C48BE11B-F643-AD73-8AEE-5F8224308996";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".unm" no;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -5561,7 +5620,7 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 13 ".dsm";
+	setAttr -s 14 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
@@ -5584,8 +5643,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId108.id" "bookshelf_and_booksShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "bookshelf_and_booksShape.iog.og[0].gco";
 connectAttr "groupId61.id" "bookshelf_and_booksShape.ciog.cog[0].cgid";
@@ -5604,6 +5661,7 @@ connectAttr "groupId107.id" "chair1Shape.ciog.cog[0].cgid";
 connectAttr "groupId131.id" "plantShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "plantShape.iog.og[0].gco";
 connectAttr "groupId130.id" "plantShape.ciog.cog[0].cgid";
+connectAttr "polyNormal1.out" "revolvedSurfaceShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -5617,6 +5675,9 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[2]" "layer1.id";
+connectAttr "curveShape1.ws" "revolve1.ic";
+connectAttr "revolve1.os" "nurbsTessellate1.is";
+connectAttr "nurbsTessellate1.op" "polyNormal1.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "floorShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "bookshelf_and_booksShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na
@@ -5632,6 +5693,7 @@ connectAttr "wall2Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "chair1Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "plantShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "plantShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "revolvedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId108.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId109.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId110.msg" ":initialShadingGroup.gn" -na;

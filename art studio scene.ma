@@ -1,9 +1,13 @@
 //Maya ASCII 2025ff03 scene
 //Name: art studio scene.ma
-//Last modified: Fri, Apr 10, 2026 12:28:33 PM
+//Last modified: Fri, Apr 10, 2026 12:41:43 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "art_desk" -rfn "art_deskRN" -op "v=0;" -typ "mayaAscii" "/Users/ryan/Documents/github/Essentials/art desk.ma";
+file -rdi 1 -ns "painting_easel" -rfn "painting_easelRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ryan/Documents/GitHub/Essentials/painting easel.ma";
 file -r -ns "art_desk" -dr 1 -rfn "art_deskRN" -op "v=0;" -typ "mayaAscii" "/Users/ryan/Documents/github/Essentials/art desk.ma";
+file -r -ns "painting_easel" -dr 1 -rfn "painting_easelRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ryan/Documents/GitHub/Essentials/painting easel.ma";
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.8.2";
@@ -13,17 +17,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.2";
-fileInfo "UUID" "8FB16086-054C-E792-7E4F-60A536502589";
+fileInfo "UUID" "F7174147-DA44-B96E-AAE6-F6B81B4CB3EB";
 createNode transform -s -n "persp";
 	rename -uid "EC4E958C-834F-2847-4316-CC8386C9EB14";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.934382400740278 6.7910074565064633 -6.0244597773358528 ;
-	setAttr ".r" -type "double3" -17.138352729580212 -243.79999999995252 0 ;
+	setAttr ".t" -type "double3" 16.353716250282183 3.9713084233521041 -10.264606595709944 ;
+	setAttr ".r" -type "double3" -8.738352729627044 -236.60000000002196 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5D17FB2F-5D4F-86AF-7335-6294C03A215E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 17.225011121337364;
+	setAttr ".coi" 16.054372315352552;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -79,20 +83,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C7AAA036-044C-9458-6EE2-4CA57F3D193A";
-	setAttr -s 13 ".lnk";
-	setAttr -s 13 ".slnk";
+	rename -uid "C203965F-F941-C772-7605-1895A37A527E";
+	setAttr -s 15 ".lnk";
+	setAttr -s 15 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "9D0DF971-AF48-750A-5E68-26AECA5A3503";
+	rename -uid "2D85CDEC-224A-CBBB-18C9-8696380112F4";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "007571D9-0C41-6BCC-02B3-4BB062C46E93";
+	rename -uid "E561CF4D-8B44-0575-975B-EBB00CA73C63";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "04C185E3-FC49-6046-BD00-02A89FA698F7";
+	rename -uid "35711681-CB4D-2E97-185A-30B4D5642935";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C6D4F15C-A84F-FD4B-D86C-DFB14CFB9C96";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7AF6CF4B-D245-7330-0D0A-9F96409AD1C6";
+	rename -uid "F80364DE-0144-C721-F45F-DAA2EDA34FA2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "14C9CF6F-AC44-F95C-A8E1-468147C39D72";
 	setAttr ".g" yes;
@@ -354,29 +358,29 @@ createNode reference -n "art_deskRN";
 		
 		2 "|art_desk:group25|art_desk:pasted__pCube5" "scalePivot" " -type \"double3\" -0.37521307690466155 2.13423513449242419 2.08989925201208537"
 		
-		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1|art_desk:pasted__pasted__pasted__pTorusShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:pCube2|art_desk:pCubeShape2.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
-		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2|art_desk:pasted__pasted__pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group5|art_desk:pasted__pCube2|art_desk:pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2|art_desk:pasted__pasted__pasted__pasted__pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:pCube2|art_desk:pCubeShape2.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "|art_desk:group9|art_desk:pasted__pTorus1|art_desk:pasted__pTorusShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group10|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1|art_desk:pasted__pasted__pasted__pTorusShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group9|art_desk:pasted__pTorus1|art_desk:pasted__pTorusShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 0 "art_deskRN" "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2|art_desk:pasted__pasted__pasted__pasted__pCubeShape2.instObjGroups" 
 		"art_desk:lambert2SG.dagSetMembers" "art_deskRN.placeHolderList[1]" "art_deskRN.placeHolderList[2]" 
@@ -463,6 +467,102 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "3439019D-1449-68CA-993C-1EB7441458F0";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode reference -n "painting_easelRN";
+	rename -uid "6E644A75-C14D-26F5-C716-96BAFEB3AF15";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"painting_easelRN"
+		"painting_easelRN" 0
+		"painting_easelRN" 36
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "translate" 
+		" -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "rotate" 
+		" -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "rotatePivot" 
+		" -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "scalePivot" 
+		" -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
+		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
+		"rotatePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
+		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube1" "translate" 
+		" -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube1" "rotate" 
+		" -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
+		
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube1" "rotatePivot" 
+		" -type \"double3\" 0 0 0"
+		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube1" "scalePivot" 
+		" -type \"double3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -474,14 +574,14 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 3;
 select -ne :renderPartition;
-	setAttr -s 13 ".st";
+	setAttr -s 15 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 14 ".s";
+	setAttr -s 16 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;

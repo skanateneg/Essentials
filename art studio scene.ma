@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: art studio scene.ma
-//Last modified: Thu, Apr 16, 2026 09:12:33 PM
+//Last modified: Thu, Apr 16, 2026 09:15:23 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "art_desk" -rfn "art_deskRN" -op "v=0;" -typ "mayaAscii" "/Users/ryan/Documents/github/Essentials/art desk.ma";
 file -rdi 1 -ns "painting_easel" -rfn "painting_easelRN" -op "v=0;" -typ "mayaAscii"
@@ -17,11 +17,11 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.2";
-fileInfo "UUID" "5FFC33FE-6F4C-AEC0-92E9-01A56020790F";
+fileInfo "UUID" "79998842-724F-0240-F978-5F8DFBF8F65A";
 createNode transform -s -n "persp";
 	rename -uid "EC4E958C-834F-2847-4316-CC8386C9EB14";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 23.002959859536084 7.7374718615158233 -6.1393868516233727 ;
+	setAttr ".t" -type "double3" 25.909216594753737 8.6726593328994426 -7.0057796133778245 ;
 	setAttr ".r" -type "double3" -17.138352729614308 106.59999999997065 0 ;
 	setAttr ".rp" -type "double3" 1.7763568394002505e-15 8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.8535624075192171e-16 -3.6516301921457532e-16 5.9861181226268692e-16 ;
@@ -29,7 +29,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5D17FB2F-5D4F-86AF-7335-6294C03A215E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.995992971378321;
+	setAttr ".coi" 24.169561977284925;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

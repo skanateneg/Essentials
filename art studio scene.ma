@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: art studio scene.ma
-//Last modified: Fri, Apr 10, 2026 12:41:43 PM
+//Last modified: Thu, Apr 16, 2026 09:12:33 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "art_desk" -rfn "art_deskRN" -op "v=0;" -typ "mayaAscii" "/Users/ryan/Documents/github/Essentials/art desk.ma";
 file -rdi 1 -ns "painting_easel" -rfn "painting_easelRN" -op "v=0;" -typ "mayaAscii"
@@ -17,17 +17,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.2";
-fileInfo "UUID" "F7174147-DA44-B96E-AAE6-F6B81B4CB3EB";
+fileInfo "UUID" "5FFC33FE-6F4C-AEC0-92E9-01A56020790F";
 createNode transform -s -n "persp";
 	rename -uid "EC4E958C-834F-2847-4316-CC8386C9EB14";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.353716250282183 3.9713084233521041 -10.264606595709944 ;
-	setAttr ".r" -type "double3" -8.738352729627044 -236.60000000002196 0 ;
+	setAttr ".t" -type "double3" 23.002959859536084 7.7374718615158233 -6.1393868516233727 ;
+	setAttr ".r" -type "double3" -17.138352729614308 106.59999999997065 0 ;
+	setAttr ".rp" -type "double3" 1.7763568394002505e-15 8.8817841970012523e-16 0 ;
+	setAttr ".rpt" -type "double3" 2.8535624075192171e-16 -3.6516301921457532e-16 5.9861181226268692e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5D17FB2F-5D4F-86AF-7335-6294C03A215E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.054372315352552;
+	setAttr ".coi" 20.995992971378321;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,21 +84,113 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "group";
+	rename -uid "83D4CA48-6242-5DEA-8543-24B45F57AB23";
+	setAttr ".t" -type "double3" 7.4873920552519477 0 7.4057539300998814 ;
+	setAttr ".r" -type "double3" 0 -88.864966261120927 0 ;
+	setAttr ".rp" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+	setAttr ".rpt" -type "double3" 1.3766765505351941e-14 0 -2.2204460492503131e-15 ;
+	setAttr ".sp" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+createNode transform -n "group1";
+	rename -uid "A62533A8-7649-2534-EA32-DB8CA6A542BC";
+	setAttr ".t" -type "double3" 0 0 -0.11059198689073213 ;
+	setAttr ".rp" -type "double3" 3.1474144528064349 3.0796852635299237 7.4372947054852547 ;
+	setAttr ".sp" -type "double3" 3.1474144528064349 3.0796852635299237 7.4372947054852547 ;
+createNode transform -n "pasted__group" -p "group1";
+	rename -uid "2FB9F371-3D46-4411-F4E6-F6ADF0C175B9";
+	setAttr ".t" -type "double3" 7.4873920552519477 0 7.4057539300998814 ;
+	setAttr ".r" -type "double3" 0 -88.864966261120927 0 ;
+	setAttr ".rp" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+	setAttr ".rpt" -type "double3" 1.3766765505351941e-14 0 -2.2204460492503131e-15 ;
+	setAttr ".sp" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+createNode transform -n "group2";
+	rename -uid "F4A03773-E249-0B03-D2E1-3EB4756F2ED5";
+	setAttr ".t" -type "double3" 0.099667649561232974 -2.9064389889452436 0 ;
+	setAttr ".s" -type "double3" 1 0.037293756297852816 1 ;
+	setAttr ".rp" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+	setAttr ".sp" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+createNode transform -n "group3";
+	rename -uid "8F64D81A-C34D-A9AB-68F8-E6888B4E0C34";
+	setAttr ".t" -type "double3" 0.77403466852385305 0 -0.86176042953830345 ;
+createNode transform -n "group4" -p "group3";
+	rename -uid "F7553586-D048-1940-30B5-5EA6185194E6";
+	setAttr ".t" -type "double3" 0.50662744025260631 0 0 ;
+createNode transform -n "group5" -p "group4";
+	rename -uid "637D5BB2-B348-FC5F-2159-D19DDF830626";
+	setAttr ".t" -type "double3" -0.74680948472638908 0 0 ;
+createNode transform -n "pasted__pasted__pCube1" -p "group5";
+	rename -uid "0EFF43F6-E846-C83B-8184-C3BF6A5B1605";
+	setAttr ".t" -type "double3" 3.1480679869895889 0.17519757594562213 7.3596883918741742 ;
+	setAttr ".r" -type "double3" 0 -88.864966261120927 0 ;
+	setAttr ".s" -type "double3" 0.080612364800451669 0.21433624771427562 11.815768438477471 ;
+createNode mesh -n "pasted__pasted__pCubeShape1" -p "pasted__pasted__pCube1";
+	rename -uid "A109AF94-5446-6B3D-7605-AE9215322A34";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pasted__pCube1" -p "group5";
+	rename -uid "30559EBB-2F4A-BBC5-BF9D-6883851C63F3";
+	setAttr ".t" -type "double3" -2.6483600003290464 0.17324627458468012 0 ;
+	setAttr ".s" -type "double3" 0.084651956217631011 0.22444397948529055 15.099717836699122 ;
+createNode mesh -n "pasted__pCubeShape1" -p "pasted__pCube1";
+	rename -uid "B9FEAB8C-804D-DB14-BA6C-EF89C91FDAF2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube1" -p "group5";
+	rename -uid "2DAC15BD-A447-CA6A-5BE5-C9A90F1AB6BF";
+	setAttr ".t" -type "double3" -2.7480276498902794 3.0796852635299237 0 ;
+	setAttr ".s" -type "double3" 0.13747853866586077 6.0182722730510489 15.099717836699122 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "AE13A936-EB4F-4FF9-EA15-7B98D459C9FE";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pasted__pCube2" -p "group5";
+	rename -uid "A3530B16-9447-2DC0-21B1-EABACE5BE73E";
+	setAttr ".t" -type "double3" 3.1474144528064345 3.0796852635299237 7.4372947054852556 ;
+	setAttr ".r" -type "double3" 0 -88.864966261120927 0 ;
+	setAttr ".s" -type "double3" 0.13747853866586077 6.0182722730510489 11.815768438477471 ;
+createNode mesh -n "pasted__pCubeShape2" -p "pasted__pCube2";
+	rename -uid "6E89B36F-EB41-475E-3507-3F8749579C47";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C203965F-F941-C772-7605-1895A37A527E";
-	setAttr -s 15 ".lnk";
-	setAttr -s 15 ".slnk";
+	rename -uid "86729886-364C-41D7-B358-05ACF47A0F1B";
+	setAttr -s 18 ".lnk";
+	setAttr -s 18 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2D85CDEC-224A-CBBB-18C9-8696380112F4";
+	rename -uid "C1AE2B2B-714C-537B-F2D4-6891DE3A0D27";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E561CF4D-8B44-0575-975B-EBB00CA73C63";
+	rename -uid "50EBC65F-E740-79FC-20AC-CBB300EB763E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "35711681-CB4D-2E97-185A-30B4D5642935";
+	rename -uid "A70C76D4-4E4B-82DB-16E6-B88F41506AAE";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C6D4F15C-A84F-FD4B-D86C-DFB14CFB9C96";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F80364DE-0144-C721-F45F-DAA2EDA34FA2";
+	rename -uid "4A373258-EE40-4EDD-9036-3FAF5B81E997";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "14C9CF6F-AC44-F95C-A8E1-468147C39D72";
 	setAttr ".g" yes;
@@ -145,145 +239,274 @@ createNode reference -n "art_deskRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"art_deskRN"
 		"art_deskRN" 0
-		"art_deskRN" 118
+		"art_deskRN" 212
+		2 "|art_desk:pCube1" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCube1" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCube1" "rotatePivot" " -type \"double3\" 0 2.08639783231815645 0.64136104217283652"
 		
 		2 "|art_desk:pCube1" "scalePivot" " -type \"double3\" 0 2.08639783231815645 0.64136104217283652"
 		
+		2 "|art_desk:pCube2" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCube2" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCube2" "rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:pCube2" "scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
+		
+		2 "|art_desk:group1|art_desk:pasted__pCube2" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group1|art_desk:pasted__pCube2" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group1|art_desk:pasted__pCube2" "rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:group1|art_desk:pasted__pCube2" "scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
+		2 "|art_desk:group4|art_desk:pasted__pCube2" "translate" " -type \"double3\" 0.073736423094470427 0 0"
+		
+		2 "|art_desk:group4|art_desk:pasted__pCube2" "scale" " -type \"double3\" 1 1 1"
+		
 		2 "|art_desk:group4|art_desk:pasted__pCube2" "rotatePivot" " -type \"double3\" 0 1.73623151348127847 2.5277395608635036"
 		
 		2 "|art_desk:group4|art_desk:pasted__pCube2" "scalePivot" " -type \"double3\" 0 1.73623151348127847 2.5277395608635036"
+		
+		2 "|art_desk:group5|art_desk:pasted__pCube2" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group5|art_desk:pasted__pCube2" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group5|art_desk:pasted__pCube2" "rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350893"
 		
 		2 "|art_desk:group5|art_desk:pasted__pCube2" "scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350893"
 		
 		2 "|art_desk:group6|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group6|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group6|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350182"
 		2 "|art_desk:group6|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350182"
+		2 "|art_desk:pTorus1" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pTorus1" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pTorus1" "rotatePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
 		2 "|art_desk:pTorus1" "scalePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
+		
+		2 "|art_desk:group7|art_desk:pasted__pTorus1" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group7|art_desk:pasted__pTorus1" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group7|art_desk:pasted__pTorus1" "rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group7|art_desk:pasted__pTorus1" "scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
+		
+		2 "|art_desk:group9|art_desk:pasted__pCube2" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group9|art_desk:pasted__pCube2" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group9|art_desk:pasted__pCube2" "rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:group9|art_desk:pasted__pCube2" "scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group9|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group9|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group9|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group9|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
+		2 "|art_desk:group9|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group9|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:group9|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350893"
 		2 "|art_desk:group9|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350893"
 		2 "|art_desk:group9|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group9|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group9|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350182"
 		2 "|art_desk:group9|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350182"
+		2 "|art_desk:group9|art_desk:pasted__pTorus1" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group9|art_desk:pasted__pTorus1" "scale" " -type \"double3\" 1 1 1"
+		
 		2 "|art_desk:group9|art_desk:pasted__pTorus1" "rotatePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
 		2 "|art_desk:group9|art_desk:pasted__pTorus1" "scalePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
 		2 "|art_desk:group9|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group9|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group9|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group9|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group9|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group9|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group9|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group9|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
+		
+		2 "|art_desk:group10|art_desk:pasted__pCube2" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group10|art_desk:pasted__pCube2" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group10|art_desk:pasted__pCube2" "rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:group10|art_desk:pasted__pCube2" "scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		
 		2 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group2|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
+		2 "|art_desk:group10|art_desk:pasted__group4|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.073736423094470427 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group4|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:group10|art_desk:pasted__group4|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127847 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group4|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127847 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350537"
 		2 "|art_desk:group10|art_desk:pasted__group5|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350537"
 		2 "|art_desk:group10|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086351603"
 		2 "|art_desk:group10|art_desk:pasted__group6|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086351603"
+		2 "|art_desk:group10|art_desk:pasted__pTorus1" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group10|art_desk:pasted__pTorus1" "scale" " -type \"double3\" 1 1 1"
+		
 		2 "|art_desk:group10|art_desk:pasted__pTorus1" "rotatePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__pTorus1" "scalePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group1|art_desk:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.7362315134812778 2.5277395608635036"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350537"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group5|art_desk:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086350537"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group6|art_desk:pasted__pasted__pasted__group5|art_desk:pasted__pasted__pasted__pasted__pCube2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group6|art_desk:pasted__pasted__pasted__group5|art_desk:pasted__pasted__pasted__pasted__pCube2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group6|art_desk:pasted__pasted__pasted__group5|art_desk:pasted__pasted__pasted__pasted__pCube2" 
 		"rotatePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086351603"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group6|art_desk:pasted__pasted__pasted__group5|art_desk:pasted__pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 1.73623151348127824 2.52773956086351603"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
@@ -291,41 +514,73 @@ createNode reference -n "art_deskRN";
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.81669457029836634 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group8|art_desk:pasted__pasted__pasted__group7|art_desk:pasted__pasted__pasted__pasted__pTorus1" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group8|art_desk:pasted__pasted__pasted__group7|art_desk:pasted__pasted__pasted__pasted__pTorus1" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group8|art_desk:pasted__pasted__pasted__group7|art_desk:pasted__pasted__pasted__pasted__pTorus1" 
 		"rotatePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
 		2 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group8|art_desk:pasted__pasted__pasted__group7|art_desk:pasted__pasted__pasted__pasted__pTorus1" 
 		"scalePivot" " -type \"double3\" 0.97502638378589934 1.6326838635745089 2.55143917333505676"
 		
+		2 "|art_desk:pCube3" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCube3" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCube3" "rotatePivot" " -type \"double3\" 0.4404311129854232 2.62223730474513639 0.79236478178915903"
 		
 		2 "|art_desk:pCube3" "scalePivot" " -type \"double3\" 0.4404311129854232 2.62223730474513639 0.79236478178915903"
+		
+		2 "|art_desk:group11|art_desk:pasted__pCube3" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group11|art_desk:pasted__pCube3" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group11|art_desk:pasted__pCube3" "rotatePivot" " -type \"double3\" 0.34583384985180643 2.54340566063589479 0.903409902305366"
 		
 		2 "|art_desk:group11|art_desk:pasted__pCube3" "scalePivot" " -type \"double3\" 0.34583384985180643 2.54340566063589479 0.903409902305366"
 		
+		2 "|art_desk:pCube4" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCube4" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCube4" "rotatePivot" " -type \"double3\" 0.36345960603022609 2.31069764562457092 0.7965255217641023"
 		
 		2 "|art_desk:pCube4" "scalePivot" " -type \"double3\" 0.36345960603022609 2.31069764562457092 0.7965255217641023"
 		
+		2 "|art_desk:pCylinder1" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCylinder1" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCylinder1" "rotatePivot" " -type \"double3\" -0.28670950532920048 2.36120979764593075 -0.64495744852412029"
 		
 		2 "|art_desk:pCylinder1" "scalePivot" " -type \"double3\" -0.28670950532920048 2.36120979764593075 -0.64495744852412029"
 		
+		2 "|art_desk:pCylinder4" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCylinder4" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCylinder4" "rotatePivot" " -type \"double3\" -0.28670950532920048 2.54002257340347137 -0.56479294714609607"
 		
 		2 "|art_desk:pCylinder4" "scalePivot" " -type \"double3\" -0.28670950532920048 2.54002257340347137 -0.56479294714609607"
+		
+		2 "|art_desk:group13|art_desk:group14|art_desk:pCylinder2" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group13|art_desk:group14|art_desk:pCylinder2" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group13|art_desk:group14|art_desk:pCylinder2" "rotatePivot" 
 		" -type \"double3\" -0.28670950532920048 0 0.26425633066258869"
 		2 "|art_desk:group13|art_desk:group14|art_desk:pCylinder2" "scalePivot" " -type \"double3\" -0.28670950532920048 0 0.26425633066258869"
 		
+		2 "|art_desk:group16|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group16|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:group16|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
 		"rotatePivot" " -type \"double3\" 0.2933489825588616 -0.013275241460652988 -0.25652269127157656"
 		
@@ -333,11 +588,19 @@ createNode reference -n "art_deskRN";
 		"scalePivot" " -type \"double3\" 0.2933489825588616 -0.013275241460652988 -0.25652269127157656"
 		
 		2 "|art_desk:group17|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group17|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group17|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
 		"rotatePivot" " -type \"double3\" -0.38952953805979501 -0.0008958787442277516 -0.017311415931939883"
 		
 		2 "|art_desk:group17|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
 		"scalePivot" " -type \"double3\" -0.38952953805979501 -0.0008958787442277516 -0.017311415931939883"
 		
+		2 "|art_desk:group18|art_desk:pasted__group13|art_desk:pasted__group14|art_desk:pasted__pCylinder2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group18|art_desk:pasted__group13|art_desk:pasted__group14|art_desk:pasted__pCylinder2" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:group18|art_desk:pasted__group13|art_desk:pasted__group14|art_desk:pasted__pCylinder2" 
 		"rotatePivot" " -type \"double3\" -0.2810532766817927 0.17566249326994221 0.20539107299487358"
 		
@@ -345,42 +608,53 @@ createNode reference -n "art_deskRN";
 		"scalePivot" " -type \"double3\" -0.2810532766817927 0.17566249326994221 0.20539107299487358"
 		
 		2 "|art_desk:group19|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
+		"translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		2 "|art_desk:group19|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|art_desk:group19|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
 		"rotatePivot" " -type \"double3\" -0.11904971968200384 -0.019189181175405867 -0.37080006514403885"
 		
 		2 "|art_desk:group19|art_desk:pasted__group15|art_desk:pasted__pasted__group13|art_desk:pasted__pasted__group14|art_desk:pasted__pasted__pCylinder2" 
 		"scalePivot" " -type \"double3\" -0.11904971968200384 -0.019189181175405867 -0.37080006514403885"
 		
+		2 "|art_desk:pCube5" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:pCube5" "scale" " -type \"double3\" 1 1 1"
 		2 "|art_desk:pCube5" "rotatePivot" " -type \"double3\" 0 2.13423513449242419 2.11228920153864053"
 		
 		2 "|art_desk:pCube5" "scalePivot" " -type \"double3\" 0 2.13423513449242419 2.11228920153864053"
+		
+		2 "|art_desk:group25|art_desk:pasted__pCube5" "translate" " -type \"double3\" 0.00079388158080018201 0 0"
+		
+		2 "|art_desk:group25|art_desk:pasted__pCube5" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|art_desk:group25|art_desk:pasted__pCube5" "rotatePivot" " -type \"double3\" -0.37521307690466155 2.13423513449242419 2.08989925201208537"
 		
 		2 "|art_desk:group25|art_desk:pasted__pCube5" "scalePivot" " -type \"double3\" -0.37521307690466155 2.13423513449242419 2.08989925201208537"
 		
-		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1|art_desk:pasted__pasted__pasted__pTorusShape1.instObjGroups" 
+		3 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group5|art_desk:pasted__pCube2|art_desk:pasted__pCubeShape2.instObjGroups" 
+		3 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2|art_desk:pasted__pasted__pasted__pasted__pCubeShape2.instObjGroups" 
+		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1|art_desk:pasted__pasted__pasted__pTorusShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group8|art_desk:pasted__group7|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:pCube2|art_desk:pCubeShape2.instObjGroups" ":initialShadingGroup.dagSetMembers" 
-		"-na"
 		3 "|art_desk:group9|art_desk:pasted__pTorus1|art_desk:pasted__pTorusShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|art_desk:group10|art_desk:pasted__group8|art_desk:pasted__pasted__group7|art_desk:pasted__pasted__pasted__pTorus1|art_desk:pasted__pasted__pasted__pTorusShape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|art_desk:group9|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
+		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2|art_desk:pasted__pasted__pasted__pasted__pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:pCube2|art_desk:pCubeShape2.instObjGroups" ":initialShadingGroup.dagSetMembers" 
+		"-na"
+		3 "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__pTorus1|art_desk:pasted__pasted__pTorusShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group5|art_desk:pasted__pCube2|art_desk:pasted__pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group10|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|art_desk:group2|art_desk:pasted__group1|art_desk:pasted__pasted__pCube2|art_desk:pasted__pasted__pCubeShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		5 0 "art_deskRN" "|art_desk:group10|art_desk:pasted__group9|art_desk:pasted__pasted__group2|art_desk:pasted__pasted__pasted__group1|art_desk:pasted__pasted__pasted__pasted__pCube2|art_desk:pasted__pasted__pasted__pasted__pCubeShape2.instObjGroups" 
 		"art_desk:lambert2SG.dagSetMembers" "art_deskRN.placeHolderList[1]" "art_deskRN.placeHolderList[2]" 
@@ -436,7 +710,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 3410\n            -height 1806\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 3410\n            -height 1652\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
 		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n"
 		+ "            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
@@ -459,8 +733,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 3410\\n    -height 1806\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 3410\\n    -height 1806\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 3410\\n    -height 1652\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 3410\\n    -height 1652\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -474,7 +748,7 @@ createNode reference -n "painting_easelRN";
 		"painting_easelRN" 0
 		"painting_easelRN" 36
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -484,7 +758,7 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -494,7 +768,7 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -504,7 +778,8 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube3" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "translate" 
-		" -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		" -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
+		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "rotate" 
 		" -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
 		
@@ -513,7 +788,7 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube2" "scalePivot" 
 		" -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -523,7 +798,7 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube4" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -533,7 +808,7 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pCube3" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -543,7 +818,7 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pCube3" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
-		"translate" " -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		"translate" " -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
 		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
 		"rotate" " -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
@@ -553,7 +828,8 @@ createNode reference -n "painting_easelRN";
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pasted__pasted__pasted__pCube2" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube1" "translate" 
-		" -type \"double3\" -0.971102677506686 0.31836094552312449 -1.24208835106578319"
+		" -type \"double3\" -0.97080597118345568 0.31845587183493146 -1.2425599653622299"
+		
 		2 "|painting_easel:group7|painting_easel:group8|painting_easel:pCube1" "rotate" 
 		" -type \"double3\" 14.946727646677056 56.55352433882616481 17.74121869749855662"
 		
@@ -563,6 +839,74 @@ createNode reference -n "painting_easelRN";
 		" -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode polyCube -n "polyCube1";
+	rename -uid "A04BFDAA-8145-A23D-8BA4-E487DE64649B";
+	setAttr ".cuv" 4;
+createNode polyCube -n "pasted__polyCube1";
+	rename -uid "A554E014-5F4E-281B-E368-78B05CFB4AB9";
+	setAttr ".cuv" 4;
+createNode polyCube -n "pasted__pasted__polyCube1";
+	rename -uid "28E98285-FA47-9F57-3388-BF8775556D32";
+	setAttr ".cuv" 4;
+createNode lambert -n "lambert2";
+	rename -uid "7BF7CA17-4240-4136-789A-77B12891C310";
+	setAttr ".c" -type "float3" 0.268884 0.28413633 0.29100001 ;
+createNode shadingEngine -n "lambert2SG";
+	rename -uid "5952D0EA-6A43-DA2A-EC63-D69CE6B4CC85";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "A4B74856-9543-EAFF-4998-EC93E806B785";
+createNode polyCube -n "pasted__polyCube2";
+	rename -uid "FB342155-AA42-148E-8FD2-4A9850CA0D2F";
+	setAttr ".cuv" 4;
+createNode materialInfo -n "pasted__materialInfo1";
+	rename -uid "58567E6E-D942-8657-51EA-5F9A3101F890";
+createNode shadingEngine -n "pasted__lambert2SG";
+	rename -uid "ECEDF98C-E640-7A74-3339-81B52E259722";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode lambert -n "pasted__lambert2";
+	rename -uid "D063FAF8-3A4A-5483-324A-ABAE332404C8";
+	setAttr ".c" -type "float3" 0.268884 0.28413633 0.29100001 ;
+createNode lambert -n "lambert3";
+	rename -uid "FBAB0A62-7143-7FAA-0299-4DA1A19760EA";
+createNode shadingEngine -n "lambert3SG";
+	rename -uid "3196D6E9-834C-A54C-1397-FB8601F3752B";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "F74A3CCB-0643-8D96-FCA8-CFA4C1F6C603";
+createNode polyBevel3 -n "polyBevel1";
+	rename -uid "86ED7755-FF48-2BD0-02D7-48B6C10A94E0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[1:2]" "e[6:7]";
+	setAttr ".ix" -type "matrix" 0.0015968326142840794 0 0.08059654759555808 0 0 0.21433624771427562 0 0
+		 -11.813450029498537 0 0.2340559596793218 0 3.1480679869895889 0.17519757594562213 7.3596883918741742 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.5685;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyBevel3 -n "polyBevel2";
+	rename -uid "AE5C939D-3644-4CA5-05CF-EAB521B13224";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[1:2]" "e[6:7]";
+	setAttr ".ix" -type "matrix" 0.084651956217631011 0 0 0 0 0.22444397948529055 0 0
+		 0 0 15.099717836699122 0 -2.6483600003290464 0.17324627458468012 0 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 0.5685;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -574,10 +918,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 3;
 select -ne :renderPartition;
-	setAttr -s 15 ".st";
+	setAttr -s 18 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 16 ".s";
+	setAttr -s 19 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -620,10 +964,20 @@ connectAttr "art_deskRN.phl[17]" "art_deskRN.phl[18]";
 connectAttr "art_deskRN.phl[19]" "art_deskRN.phl[20]";
 connectAttr "art_deskRN.phl[21]" "art_deskRN.phl[22]";
 connectAttr "art_deskRN.phl[23]" "art_deskRN.phl[24]";
+connectAttr "polyBevel1.out" "pasted__pasted__pCubeShape1.i";
+connectAttr "polyBevel2.out" "pasted__pCubeShape1.i";
+connectAttr "polyCube1.out" "pCubeShape1.i";
+connectAttr "pasted__polyCube1.out" "pasted__pCubeShape2.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "pasted__lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "pasted__lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -632,5 +986,28 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "lambert2.oc" "lambert2SG.ss";
+connectAttr "pasted__pCubeShape2.iog" "lambert2SG.dsm" -na;
+connectAttr "pCubeShape1.iog" "lambert2SG.dsm" -na;
+connectAttr "lambert2SG.msg" "materialInfo1.sg";
+connectAttr "lambert2.msg" "materialInfo1.m";
+connectAttr "pasted__lambert2SG.msg" "pasted__materialInfo1.sg";
+connectAttr "pasted__lambert2.msg" "pasted__materialInfo1.m";
+connectAttr "pasted__lambert2.oc" "pasted__lambert2SG.ss";
+connectAttr "lambert3.oc" "lambert3SG.ss";
+connectAttr "pasted__pasted__pCubeShape1.iog" "lambert3SG.dsm" -na;
+connectAttr "pasted__pCubeShape1.iog" "lambert3SG.dsm" -na;
+connectAttr "lambert3SG.msg" "materialInfo2.sg";
+connectAttr "lambert3.msg" "materialInfo2.m";
+connectAttr "pasted__pasted__polyCube1.out" "polyBevel1.ip";
+connectAttr "pasted__pasted__pCubeShape1.wm" "polyBevel1.mp";
+connectAttr "pasted__polyCube2.out" "polyBevel2.ip";
+connectAttr "pasted__pCubeShape1.wm" "polyBevel2.mp";
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "pasted__lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "pasted__lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of art studio scene.ma
